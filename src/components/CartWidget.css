@@ -1,0 +1,15 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.navbarCart {
+  color: aliceblue;
+  height: 4vh;
+  padding: 3vh;
+  transition: 0.5s;
+}
+
+.navbarCart:hover {
+  background-color: #ff964c;
+}

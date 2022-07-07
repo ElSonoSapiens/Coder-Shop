@@ -1,0 +1,30 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.catalogo {
+  text-align: center;
+  background-color: #ff964c;
+  padding: 3vh;
+}
+
+.catalogo h1 {
+  margin: 2vh;
+  font-size: 5vh;
+}
+
+.nombre {
+  font-size: 4vh;
+  margin: 1vh;
+}
+
+.descripcion {
+  font-size: 3vh;
+  margin: 1vh;
+}
+
+.precio {
+  font-size: 3vh;
+  margin: 1vh;
+}

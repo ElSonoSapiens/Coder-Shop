@@ -1,17 +1,28 @@
 import "./Navbar.css";
 //import "bootstrap/dist/css/bootstrap.min.css";
+import CartWidget from "./CartWidget.js";
+import ItemListContainer from "../containers/ItemListContainer.js";
 
-function Navbar() {
+const Navbar = () => {
   return (
-    <header id="navBar">
+    <header className="navBar">
       <h2>KohaiCan</h2>
-      <li id="navBarList">
-        <ul>Collares</ul>
-        <ul>Correas</ul>
-        <ul>Juguetes</ul>
-        <ul>Alimento</ul>
+      <li className="navBarList">
+        <ul>
+          <a href="#">Collares</a>
+        </ul>
+        <ul>
+          <a href="#">Correas</a>
+        </ul>
+        <ul>
+          <a href="#">Juguetes</a>
+        </ul>
+        <ul>
+          <a href="#">Alimento</a>
+        </ul>
       </li>
+      <CartWidget />
     </header>
   );
-}
+};
 export default Navbar;

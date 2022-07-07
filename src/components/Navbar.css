@@ -3,10 +3,10 @@
   padding: 0;
 }
 
-#navBar {
+.navBar {
   height: 10vh;
-  background-color: #282c34;
-  font-size: 2rem;
+  background-color: #ae5413;
+  font-size: 3vh;
   display: flex;
   color: white;
   text-align: center;
@@ -17,7 +17,7 @@
   padding: 0 2vw;
 }
 
-#navBarList {
+.navBarList {
   height: 10vh;
   display: flex;
   flex-direction: row;
@@ -25,12 +25,12 @@
   align-items: center;
 }
 
-#navBar h2 {
+.navBar h2 {
   line-height: 10vh;
   transition: 0.5s;
 }
 
-#navBar h2:hover {
+.navBar h2:hover {
   transform: scale(120%);
 }
 
@@ -38,7 +38,7 @@ li {
   list-style: none;
 }
 
-#navBarList ul {
+.navBarList ul {
   list-style: none;
   padding: 0;
   height: 10vh;
@@ -47,6 +47,11 @@ li {
   line-height: 10vh;
 }
 
-#navBarList ul:hover {
-  background-color: #31559d;
+.navBarList ul:hover {
+  background-color: #ff964c;
+}
+
+.navBarList ul a {
+  text-decoration: none;
+  color: white;
 }
