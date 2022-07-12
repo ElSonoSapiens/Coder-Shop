@@ -1,0 +1,31 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.itemCount {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+}
+
+
+.btnMasMenos {
+  height: 4vh;
+  width: 4vw;
+  margin: 1vw;
+  font-size: 3vh;
+}
+
+.btnCarrito {
+  height: 8vh;
+  width: 11vw;
+  margin: 1vw;
+  font-size: 3vh;
+}
+
+.counter {
+  font-size: 3vh;
+}
