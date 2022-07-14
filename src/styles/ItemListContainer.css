@@ -7,6 +7,11 @@
   text-align: center;
   background-color: #ff964c;
   padding: 3vh;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
 }
 
 .catalogo h1 {
@@ -30,6 +35,8 @@
 }
 
 .flexCatalogo {
+
+  width: 100vw;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;

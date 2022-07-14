@@ -1,6 +1,7 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import "../styles/ItemListContainer.css";
 import ItemCount from "../components/ItemCount.jsx";
+import ItemList from "../components/ItemList";
 
 const Producto = (props) => {
   return (
@@ -12,33 +13,66 @@ const Producto = (props) => {
   );
 };
 
-const ItemListContainer = () => {
+const ItemListContainer = ({ greating }) => {
+  const products = () => [
+    {
+      id: 1,
+      name: "Correa",
+      description: "2mt",
+      price: 2000,
+      img: "https://http2.mlstatic.com/D_NQ_NP_990581-MLA50663579498_072022-O.webp",
+    },
+    {
+      id: 2,
+      name: "Collar",
+      description: "25cm",
+      price: 1500,
+      img: "https://http2.mlstatic.com/D_NQ_NP_699478-MLA48599601120_122021-O.webp",
+    },
+    {
+      id: 3,
+      name: "Pretal",
+      description: "XL",
+      price: 3000,
+      img: "https://http2.mlstatic.com/D_NQ_NP_830681-MLA48454692285_122021-O.webp",
+    },
+    {
+      id: 4,
+      name: "Balanceao",
+      description: "15kg",
+      price: 7000,
+      img: "https://http2.mlstatic.com/D_NQ_NP_717513-MLA46542019198_062021-O.webp",
+    },
+  ];
+
+  const [data, setData] = useState([]);
+
+  useEffect(() => {
+    const getData = new Promise((resolve) => {
+      setTimeout(() => {
+        resolve(products);
+      }, 2000);
+    });
+    getData.then((res) => setData(res));
+  }, []);
+
   const onAdd = (param) => {
-    console.log(`La cantidad comprada es ${param}`);
+    param > 0
+      ? console.log(`La cantidad comprada es ${param}`)
+      : console.log(`La cantidad es incorrecta`);
   };
 
   return (
     <>
+      <div>{greating}</div>
       <div className="catalogo">
-        <h1>Catalogo de productos</h1>
-        <li className="flexCatalogo">
-          <ul>
-            <Producto nombre="Correa" descripcion="2mt" precio={2000} />
-            <ItemCount initial={0} stock={8} onAdd={onAdd} />
-          </ul>
-          <ul>
-            <Producto nombre="Collar" descripcion="25cm" precio={1500} />
-            <ItemCount initial={0} stock={11} onAdd={onAdd} />
-          </ul>
-          <ul>
-            <Producto nombre="Pretal" descripcion="XL" precio={3000} />
-            <ItemCount initial={0} stock={5} onAdd={onAdd} />
-          </ul>
-          <ul>
-            <Producto nombre="Balanceado" descripcion="15kg" precio={7000} />
-            <ItemCount initial={0} stock={20} onAdd={onAdd} />
-          </ul>
-        </li>
+        <ItemList data={data} />
+        <div className="flexCatalogo">
+          <ItemCount initial={0} stock={20} onAdd={onAdd} />
+          <ItemCount initial={0} stock={8} onAdd={onAdd} />
+          <ItemCount initial={0} stock={5} onAdd={onAdd} />
+          <ItemCount initial={0} stock={20} onAdd={onAdd} />
+        </div>
       </div>
     </>
   );

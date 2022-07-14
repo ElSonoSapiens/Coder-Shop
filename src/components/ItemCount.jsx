@@ -8,6 +8,8 @@ const ItemCount = ({ initial, stock, onAdd }) => {
     if (counter < stock) {
       const aux = counter + 1;
       setCounter(aux);
+    } else {
+      console.log("No hay mas stock");
     }
   };
 
@@ -15,6 +17,8 @@ const ItemCount = ({ initial, stock, onAdd }) => {
     if (counter > initial) {
       const aux = counter - 1;
       setCounter(aux);
+    } else {
+      console.log(`Querés menos que ${initial}`);
     }
   };
 
@@ -29,7 +33,7 @@ const ItemCount = ({ initial, stock, onAdd }) => {
           -
         </button>
       </div>
-      <button onClick={onAdd} className="btnCarrito">
+      <button onClick={() => onAdd(counter)} className="btnCarrito">
         Agregar al carrito
       </button>
     </div>

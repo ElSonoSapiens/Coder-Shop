@@ -1,0 +1,22 @@
+* {
+  margin: 0;
+  padding: 0
+}
+
+.imgItem {
+  height: 20vh;
+}
+
+.card {
+  height: 40vh;
+  width: 15vw;
+  border: solid;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  flex-wrap: wrap;
+  margin: 1vh;
+  background-color: white;
+  align-content: center;
+  justify-content: space-evenly;
+}
