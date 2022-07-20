@@ -1,0 +1,35 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.catalogo {
+  text-align: center;
+  background-color: #ff964c;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-around;
+  align-items: center;
+  height: 84vh;
+}
+
+.catalogo h1 {
+  margin: 2vh;
+  font-size: 5vh;
+}
+
+.nombre {
+  font-size: 4vh;
+  margin: 1vh;
+}
+
+.descripcion {
+  font-size: 3vh;
+  margin: 1vh;
+}
+
+.precio {
+  font-size: 3vh;
+  margin: 1vh;
+}
