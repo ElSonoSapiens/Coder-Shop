@@ -1,10 +1,9 @@
 import React, { useState, useEffect } from "react";
 import "../styles/ItemDetailContainer.css";
-import ItemCount from "../components/ItemCount.jsx";
 import ItemDetail from "../components/ItemDetail";
 
 const ItemDetailContainer = ({ greating }) => {
-  const products = () => [
+  const products = [
     {
       id: 1,
       name: "Correa",
@@ -31,7 +30,7 @@ const ItemDetailContainer = ({ greating }) => {
     },
     {
       id: 4,
-      name: "Balanceao",
+      name: "Balanceado",
       price: 7000,
       description: "15 kg",
       stock: 0,
@@ -39,12 +38,12 @@ const ItemDetailContainer = ({ greating }) => {
     },
   ];
 
-  const [data, setData] = useState({});
+  const [data, setData] = useState(false);
 
   useEffect(() => {
     const getData = new Promise((resolve) => {
       setTimeout(() => {
-        resolve(products[1]);
+        resolve(products[3]);
       }, 2000);
     });
     getData.then((res) => setData(res));

@@ -1,8 +1,8 @@
 import React from "react";
 import Item from "../components/Item";
 
-const ItemDetail = ({ data } = []) => {
-  return data.map((prod) => <Item key={prod.id} info={prod} />);
+const ItemDetail = ({ data }) => {
+  return <>{data ? <Item key={data.id} info={data} /> : "Cargando..."}</>;
 };
 
 export default ItemDetail;
