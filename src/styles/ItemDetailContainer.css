@@ -8,10 +8,10 @@
   background-color: #ff964c;
   display: flex;
   flex-direction: row;
-  flex-wrap: nowrap;
+  flex-wrap: wrap;
   justify-content: space-around;
   align-items: center;
-  height: 84vh;
+  height: auto;
 }
 
 .catalogo h1 {

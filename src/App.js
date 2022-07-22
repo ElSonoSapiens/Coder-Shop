@@ -1,18 +1,19 @@
 import "./styles/App.css";
-//import "bootstrap/dist/css/bootstrap.min.css";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Navbar from "./components/Navbar.jsx";
 import ItemListContainer from "./containers/ItemListContainer.jsx";
 import ItemDetailContainer from "./containers/ItemDetailContainer.jsx";
 
 const App = () => {
   return (
-    <>
+    <BrowserRouter>
       <Navbar />
-      {/* <ItemListContainer /> */}
-      <ItemDetailContainer />
-    </>
+      <Routes>
+        <Route path="/" element={<ItemListContainer />} />
+        <Route path="/category/:id" element={<ItemListContainer />} />
+        <Route path="/item/:id" element={<ItemDetailContainer />} />
+      </Routes>
+    </BrowserRouter>
   );
 };
 export default App;
-
-

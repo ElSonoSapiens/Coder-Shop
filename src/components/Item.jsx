@@ -21,6 +21,9 @@ const Item = ({ info }) => {
         <div>
           <ItemCount initial={0} stock={info.stock} onAdd={onAdd} />
         </div>
+        <div>
+          <button>Detalles del producto</button>
+        </div>
       </div>
     </>
   );

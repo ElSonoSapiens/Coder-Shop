@@ -4,12 +4,13 @@
 }
 
 .imgItem {
-  height: 20vh;
+  max-height: 20vh;
+  max-width: 18vw;
 }
 
 .card {
   height: 40vh;
-  width: 15vw;
+  width: 20vw;
   border: solid;
   display: flex;
   align-items: center;
