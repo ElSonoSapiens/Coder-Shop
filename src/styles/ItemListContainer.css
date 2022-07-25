@@ -3,40 +3,9 @@
   padding: 0;
 }
 
-.catalogo {
-  text-align: center;
-  background-color: #ff964c;
+.listCatalogo {
+  text-align: center;  
   padding: 3vh;
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: space-around;
-  align-items: center;
-}
-
-.catalogo h1 {
-  margin: 2vh;
-  font-size: 5vh;
-}
-
-.nombre {
-  font-size: 4vh;
-  margin: 1vh;
-}
-
-.descripcion {
-  font-size: 3vh;
-  margin: 1vh;
-}
-
-.precio {
-  font-size: 3vh;
-  margin: 1vh;
-}
-
-.flexCatalogo {
-
-  width: 100vw;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;

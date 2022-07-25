@@ -3,9 +3,8 @@
   padding: 0;
 }
 
-.catalogo {
+.detailCatalogo {
   text-align: center;
-  background-color: #ff964c;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
@@ -14,7 +13,7 @@
   height: auto;
 }
 
-.catalogo h1 {
+.detailCatalogo h1 {
   margin: 2vh;
   font-size: 5vh;
 }

@@ -1,0 +1,45 @@
+* {
+  margin: 0;
+  padding: 0
+}
+
+.listCard {
+  height: 40rem;
+  width: 20rem;
+  border: solid;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  flex-wrap: wrap;
+  background-color: white;
+  align-content: center;
+  justify-content: space-evenly;
+  padding: 2vh;
+  border-radius: 1vh;
+  margin: 1vh;
+}
+
+.listName {
+  font-size: 3vh;
+}
+
+.listImg {
+  max-height: 10rem;
+  max-width: 10rem;
+}
+
+.listStock {
+  font-size: 2.5vh;
+}
+
+.btnDetalles {
+  height: auto;
+  width: auto;
+  padding: 1vw;
+  font-size: 2vh;
+  border-radius: 1vh;
+}
+
+.listPrice {
+  font-size: 3vh;
+}

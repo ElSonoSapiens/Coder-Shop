@@ -17,6 +17,11 @@
   padding: 0 2vw;
 }
 
+.navBar a {
+  text-decoration: none;
+  color: white;
+}
+
 .navBarList {
   height: 10vh;
   display: flex;
@@ -51,7 +56,8 @@ li {
   background-color: #ff964c;
 }
 
-.navBarList ul a {
+.navBarList ul Link {
   text-decoration: none;
   color: white;
+  line-height: 10vh;
 }

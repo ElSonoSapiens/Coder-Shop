@@ -1,0 +1,47 @@
+* {
+  margin: 0;
+  padding: 0
+}
+
+body {
+  height: 100vh;
+  font-size: 5vh;
+}
+
+.itemImg {
+  max-height: 40vh;
+  max-width: 40vw;
+}
+
+.itemCard {
+  min-height: 60vh;
+  width: 60vw;
+  border: solid;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  flex-wrap: wrap;
+  margin: 1vh;
+  background-color: white;
+  align-content: center;
+  justify-content: space-between;
+  padding: 2vh;
+  border-radius: 1vh;
+}
+
+button {
+  border-radius: 1vh;
+}
+
+.itemName {
+  font-size: 3vh;
+}
+
+.itemDescripcion {
+  padding: 2vh;
+  font-size: 2vh;
+}
+
+.itemStock {
+  font-size: 2.5vh;
+}

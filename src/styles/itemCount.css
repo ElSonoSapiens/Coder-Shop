@@ -9,8 +9,8 @@
   flex-wrap: wrap;
   justify-content: space-around;
   align-items: center;
+  
 }
-
 
 .btnMasMenos {
   height: 4vh;
@@ -20,10 +20,11 @@
 }
 
 .btnCarrito {
-  height: 8vh;
-  width: 11vw;
+  height: auto;
+  width: auto;
   margin: 1vw;
-  font-size: 3vh;
+  padding: 1vw;
+  font-size: 2vh;
 }
 
 .counter {
