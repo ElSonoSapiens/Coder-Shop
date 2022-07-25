@@ -2,9 +2,14 @@ import React from "react";
 import "../styles/ItemList.css";
 import ItemCount from "../components/ItemCount.jsx";
 import { Link } from "react-router-dom";
-import onAdd from "./OnAdd";
 
 const Item = ({ info }) => {
+  const onAdd = (param) => {
+    param > 0
+      ? alert(`La cantidad a comprar es ${param}`)
+      : alert(`La cantidad es incorrecta`);
+  };
+
   return (
     <>
       <div>

@@ -45,3 +45,11 @@ button {
 .itemStock {
   font-size: 2.5vh;
 }
+
+.itemCheckout {
+  height: auto;
+  width: auto;
+  margin: 1vw;
+  padding: 1vw;
+  font-size: 2vh;
+}
