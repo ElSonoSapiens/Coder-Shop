@@ -27,7 +27,7 @@ const Item = ({ info }) => {
           <Link to={`/item/${info.id}`}>
             <button className="btnDetalles"> Detalles del producto</button>
           </Link>
-          <ItemCount initial={0} stock={info.stock} onAdd={onAdd} />
+          {/* <ItemCount initial={0} stock={info.stock} onAdd={onAdd} /> */}
         </div>
       </div>
     </>

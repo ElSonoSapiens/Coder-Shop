@@ -5,7 +5,6 @@ import { useParams } from "react-router-dom";
 import products from "../products";
 
 const ItemDetailContainer = ({ greating }) => {
-  
   const [data, setData] = useState(false);
   const { id } = useParams();
 

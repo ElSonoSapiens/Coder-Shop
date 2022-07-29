@@ -2,16 +2,20 @@ import React from "react";
 import "../styles/ItemDetail.css";
 import ItemCount from "../components/ItemCount.jsx";
 import { Link } from "react-router-dom";
-import { useState } from "react";
+import { useState, useContext } from "react";
+import { CartContext } from "./CartContext";
 
 const Item = ({ info }) => {
   const [itemCount, setItemCount] = useState(0);
 
-  const onAdd = (param) => {
-    param > 0
-      ? alert(`La cantidad a comprar es ${param}`)
-      : alert(`La cantidad es incorrecta`);
-    setItemCount(param);
+  const test = useContext(CartContext);
+
+  const onAdd = (qty) => {
+    qty > 0
+      ? console.log(`La cantidad a comprar es ${qty}`)
+      : console.log(`La cantidad es incorrecta`);
+    setItemCount(qty);
+    test.addItem(info, qty);
   };
 
   return (

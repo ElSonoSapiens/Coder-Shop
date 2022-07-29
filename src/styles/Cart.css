@@ -7,3 +7,83 @@ h1 {
   text-align: center;
   margin: 2vh
 }
+
+body {
+  height: 100vh;
+  font-size: 5vh;
+}
+
+.cartImg {
+  max-height: 20vh;
+  max-width: 20vw;
+}
+
+.cartContainer {
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  flex-wrap: nowrap;
+}
+
+.cartCard {
+  width: 90vw;
+  border: solid;
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  background-color: white;
+  justify-content: space-between;
+  padding: 2vh;
+  border-radius: 1vh;
+  margin: 2vh;
+}
+
+.cartRemove,
+.cartClear {
+  height: auto;
+  width: auto;
+  padding: 1vw;
+  font-size: 2vh;
+  border-radius: 1vh;
+  margin: 1vh;
+}
+
+.cartUPD {
+  width: 15vh;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.cartName {
+  font-size: 3vh;
+}
+
+.cartQty {
+  font-size: 3vh;
+}
+
+.cartPrice {
+  font-size: 4vh;
+}
+
+.cartDescripcion {
+  padding: 2vh;
+  font-size: 2vh;
+}
+
+.cartStock {
+  font-size: 2.5vh;
+}
+
+.cartCheckout {
+  height: auto;
+  width: auto;
+  margin: 1vw;
+  padding: 1vw;
+  font-size: 2vh;
+}
