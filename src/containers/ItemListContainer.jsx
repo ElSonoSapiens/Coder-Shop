@@ -4,7 +4,7 @@ import ItemList from "../components/ItemList";
 import { useParams } from "react-router-dom";
 import products from "../products";
 
-const ItemListContainer = () => {
+function ItemListContainer() {
   const [data, setData] = useState([]);
   const { id } = useParams();
 
@@ -28,11 +28,15 @@ const ItemListContainer = () => {
 
   return (
     <>
-      <div className="listCatalogo">
-        <ItemList data={data} />
-      </div>
+      {data.length > 0 ? (
+        <div className="listCatalogo">
+          <ItemList data={data} />
+        </div>
+      ) : (
+        <p className="cargando">Cargando...</p>
+      )}
     </>
   );
-};
+}
 
 export default ItemListContainer;

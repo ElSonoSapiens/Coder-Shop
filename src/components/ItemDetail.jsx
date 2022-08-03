@@ -6,16 +6,15 @@ import { useState, useContext } from "react";
 import { CartContext } from "./CartContext";
 
 const Item = ({ info }) => {
+  const context = useContext(CartContext);
   const [itemCount, setItemCount] = useState(0);
-
-  const test = useContext(CartContext);
 
   const onAdd = (qty) => {
     qty > 0
-      ? console.log(`La cantidad a comprar es ${qty}`)
-      : console.log(`La cantidad es incorrecta`);
+      ? alert(`La cantidad a comprar es ${qty}`)
+      : alert(`La cantidad es incorrecta`);
     setItemCount(qty);
-    test.addItem(info, qty);
+    context.addItem(info, qty);
   };
 
   return (
@@ -35,7 +34,7 @@ const Item = ({ info }) => {
           <ItemCount initial={itemCount} stock={info.stock} onAdd={onAdd} />
         ) : (
           <Link to="/cart">
-            <button className="itemCheckout">Checkout</button>
+            <button className="itemCheckout">Terminar mi Compra</button>
           </Link>
         )}
       </div>

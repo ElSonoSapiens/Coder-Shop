@@ -4,11 +4,15 @@
 }
 
 .listCatalogo {
-  text-align: center;  
+  text-align: center;
   padding: 3vh;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: space-around;
   align-items: center;
+}
+
+.cargando {
+  text-align: center;
 }

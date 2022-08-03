@@ -9,7 +9,7 @@ const ItemCount = ({ initial, stock, onAdd }) => {
       const aux = counter + 1;
       setCounter(aux);
     } else {
-      console.log("No hay mas stock");
+      alert("No hay mas stock");
     }
   };
 
@@ -18,7 +18,7 @@ const ItemCount = ({ initial, stock, onAdd }) => {
       const aux = counter - 1;
       setCounter(aux);
     } else {
-      console.log(`Querés menos que ${initial}`);
+      alert(`Querés menos que ${initial}`);
     }
   };
 

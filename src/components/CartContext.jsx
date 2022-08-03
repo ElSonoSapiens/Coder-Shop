@@ -7,7 +7,7 @@ const CartContextProvider = ({ children }) => {
 
   const addItem = (item, qty) => {
     let newCart = [];
-    let isInCart = cartList.find((isInCart) => isInCart.id === item.id);
+    let isInCart = cartList.find((e) => e.id === item.id);
 
     if (isInCart) {
       isInCart.qty += qty;
@@ -28,8 +28,26 @@ const CartContextProvider = ({ children }) => {
     setCartList([]);
   };
 
+  const sumQty = () => {
+    let total = 0;
+
+    cartList.map((e) => (total += e.qty));
+
+    return total;
+  };
+
+  const sumPrice = () => {
+    let total = 0;
+
+    cartList.map((e) => (total += e.price * e.qty));
+
+    return total;
+  };
+
   return (
-    <CartContext.Provider value={{ cartList, addItem, removeItem, clear }}>
+    <CartContext.Provider
+      value={{ cartList, addItem, removeItem, clear, sumQty, sumPrice }}
+    >
       {children}
     </CartContext.Provider>
   );

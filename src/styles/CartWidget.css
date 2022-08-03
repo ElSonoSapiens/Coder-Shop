@@ -6,10 +6,24 @@
 .navbarCart {
   color: aliceblue;
   height: 4vh;
-  padding: 3vh;
-  transition: 0.5s;
 }
 
-.navbarCart:hover {
+.widget:hover {
   background-color: #ff964c;
+}
+
+.widget {
+  width: rem;
+  display: flex;
+  align-items: center;
+  transition: 0.5s;
+  height: 4vh;
+  padding: 3vh;
+}
+
+.sumQty {
+  background-color: red;
+  border-radius: 1rem;
+  font-size: 1.5rem;
+  padding: .5rem;
 }
