@@ -8,24 +8,27 @@ import { productsCollection } from "../utils/firebaseConfig";
 
 function ItemListContainer() {
   const [data, setData] = useState([]);
-  const { id } = useParams();
+  const { categoryId } = useParams();
 
   useEffect(() => {
-    const requestFilter = id
-      ? query(productsCollection, where("category", "==", id))
-      : productsCollection;
-
-    getDocs(requestFilter)
-      .then((result) =>
+    if (categoryId) {
+      const productsFilter = query(
+        productsCollection,
+        where("categoryId", "==", categoryId)
+      );
+      getDocs(productsFilter).then((result) =>
         setData(
-          result.docs.map((doc) => ({
-            id: doc.id,
-            ...doc.data(),
-          }))
+          result.docs.map((product) => ({ id: product.id, ...product.data() }))
         )
-      )
-      .catch((err) => console.log("error en array products"));
-  }, [id]);
+      );
+    } else {
+      getDocs(productsCollection).then((result) =>
+        setData(
+          result.docs.map((product) => ({ id: product.id, ...product.data() }))
+        )
+      );
+    }
+  }, [categoryId]);
 
   return (
     <>

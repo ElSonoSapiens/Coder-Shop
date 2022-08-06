@@ -3,33 +3,23 @@ import "../styles/ItemDetailContainer.css";
 import ItemDetail from "../components/ItemDetail";
 import { useParams } from "react-router-dom";
 // import products from "../products";
-import { getDocs, query, where } from "firebase/firestore";
 import { productsCollection } from "../utils/firebaseConfig";
+import { doc, getDoc } from "firebase/firestore";
 
 const ItemDetailContainer = ({ greating }) => {
   const [data, setData] = useState(false);
   const { id } = useParams();
 
   useEffect(() => {
-    // const getData = new Promise((resolve) => {
-    //   setTimeout(() => {
-    //     resolve(products[id]);
-    //   }, 2000);
-    // });
-    // getData.then((res) => setData(res));
+    const filter = doc(productsCollection, id);
 
-    const requestFilter = id
-      ? query(productsCollection, where("id", "==", id))
-      : productsCollection;
-
-    getDocs(requestFilter)
-      .then((result) => setData(result.docs.data()))
-      .catch((err) => console.log("error en array products"));
+    getDoc(filter)
+      .then((result) => setData({ id: result.id, ...result.data() }))
+      .catch((err) => console.log("error en array products Detail"));
   }, [id]);
 
   return (
     <>
-      <div>{greating}</div>
       <div className="detailCatalogo">
         <ItemDetail data={data} />
       </div>

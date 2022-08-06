@@ -2,8 +2,6 @@ import React from "react";
 import "../styles/Cart.css";
 import { CartContext } from "./CartContext";
 import { useContext } from "react";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
-import ItemListContainer from "../containers/ItemListContainer.jsx";
 import { Link } from "react-router-dom";
 
 const Cart = () => {

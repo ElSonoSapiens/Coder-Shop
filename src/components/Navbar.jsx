@@ -11,16 +11,16 @@ const Navbar = () => {
         </Link>
         <li className="navBarList">
           <ul>
-            <Link to="/category/1">Correas</Link>
+            <Link to="/category/correas">Correas</Link>
           </ul>
           <ul>
-            <Link to="/category/2">Collares</Link>
+            <Link to="/category/collares">Collares</Link>
           </ul>
           <ul>
-            <Link to="/category/3">Juguetes </Link>
+            <Link to="/category/juguetes">Juguetes </Link>
           </ul>
           <ul>
-            <Link to="/category/4">Alimentos </Link>
+            <Link to="/category/alimento">Alimentos </Link>
           </ul>
         </li>
         <CartWidget />
