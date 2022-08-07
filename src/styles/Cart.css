@@ -18,13 +18,15 @@ body {
   max-width: 20vw;
 }
 
-.cartContainer {
+.cartSelfContainer {
   width: 100vw;
+}
+
+.cartContainer {
   display: flex;
   align-items: center;
-  flex-direction: column;
-  justify-content: center;
-  align-content: center;
+  flex-direction: row;
+  justify-content: space-evenly;
   flex-wrap: nowrap;
   margin-top: 5vh;
 }
@@ -45,7 +47,7 @@ body {
 .cartRemove,
 .cartClear {
   height: auto;
-  width: auto;
+  width: 100%;
   padding: 1vw;
   font-size: 2vh;
   border-radius: 1vh;
@@ -94,10 +96,11 @@ body {
 }
 
 .footer {
-  width: 92vw;
+  width: 30vw;
   display: flex;
-  justify-content: space-between;
   margin: 2vw;
+  flex-direction: column;
+  align-items: stretch;
 }
 
 .total {

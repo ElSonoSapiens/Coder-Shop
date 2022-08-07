@@ -46,9 +46,9 @@ button {
   font-size: 2.5vh;
 }
 
-.itemCheckout {
+.btnItemCheckout {
   height: auto;
-  width: auto;
+  width: 20vw;
   margin: 1vw;
   padding: 1vw;
   font-size: 2vh;

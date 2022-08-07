@@ -3,6 +3,7 @@ import "../styles/Cart.css";
 import { CartContext } from "./CartContext";
 import { useContext } from "react";
 import { Link } from "react-router-dom";
+import Form from "./Form";
 
 const Cart = () => {
   const cartContext = useContext(CartContext);
@@ -49,18 +50,24 @@ const Cart = () => {
       )}
 
       {cartContext.cartList.length > 0 && (
-        <div className="cartContainer">
-          <div className="footer">
-            <button className="cartClear" onClick={cartContext.clear}>
-              Clear Items{" "}
-            </button>
-            <div className="total">
-              <p>Subtotal: ${subtotal} </p>
-              <p>IVA(21%): ${iva} </p>
-              <p>
-                <b>Total: ${total}</b>
-              </p>
+        <div className="cartSelfContainer">
+          <div className="cartContainer">
+            <div className="footer">
+              <Link to="/">
+                <button className="cartClear">Agregar mas productos</button>
+              </Link>
+              <button className="cartClear" onClick={cartContext.clear}>
+                Clear Items{" "}
+              </button>
+              <div className="total">
+                <p>Subtotal: ${subtotal} </p>
+                <p>IVA(21%): ${iva} </p>
+                <p>
+                  <b>Total: ${total}</b>
+                </p>
+              </div>
             </div>
+            <Form />
           </div>
         </div>
       )}

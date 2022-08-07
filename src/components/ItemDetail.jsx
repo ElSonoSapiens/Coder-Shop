@@ -11,7 +11,7 @@ const Item = ({ info }) => {
 
   const onAdd = (qty) => {
     qty > 0
-      ? alert(`La cantidad a comprar es ${qty}`)
+      ? console.log(`La cantidad a comprar es ${qty}`)
       : alert(`La cantidad es incorrecta`);
     setItemCount(qty);
     context.addItem(info, qty);
@@ -33,9 +33,14 @@ const Item = ({ info }) => {
         {itemCount === 0 ? (
           <ItemCount initial={itemCount} stock={info.stock} onAdd={onAdd} />
         ) : (
-          <Link to="/cart">
-            <button className="itemCheckout">Terminar mi Compra</button>
-          </Link>
+          <div cartBtns>
+            <Link to="/cart">
+              <button className="btnItemCheckout">Terminar mi Compra</button>
+            </Link>
+            <Link to="/">
+              <button className="btnItemCheckout">Agregar mas productos</button>
+            </Link>
+          </div>
         )}
       </div>
     </>

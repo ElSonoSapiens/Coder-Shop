@@ -9,7 +9,7 @@
   flex-wrap: wrap;
   justify-content: space-around;
   align-items: center;
-  
+
 }
 
 .btnMasMenos {
@@ -21,7 +21,7 @@
 
 .btnCarrito {
   height: auto;
-  width: auto;
+  width: 20vw;
   margin: 1vw;
   padding: 1vw;
   font-size: 2vh;

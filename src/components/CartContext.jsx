@@ -44,9 +44,39 @@ const CartContextProvider = ({ children }) => {
     return total;
   };
 
+  const sumTotal = () => {
+    let total = 0;
+
+    cartList.map((e) => (total += e.price * e.qty));
+
+    let iva = (total * 21) / 100;
+
+    const sumTotal = total + iva;
+
+    return sumTotal;
+  };
+
+  const processCart = () => {
+    return cartList.map((producto) => ({
+      id: producto.id,
+      title: producto.name,
+      price: producto.price,
+      qty: producto.qty,
+    }));
+  };
+
   return (
     <CartContext.Provider
-      value={{ cartList, addItem, removeItem, clear, sumQty, sumPrice }}
+      value={{
+        cartList,
+        addItem,
+        removeItem,
+        clear,
+        sumQty,
+        sumPrice,
+        sumTotal,
+        processCart,
+      }}
     >
       {children}
     </CartContext.Provider>
