@@ -60,6 +60,7 @@ const Form = () => {
             onChange={(e) => setNombre(e.target.value)}
             value={nombre}
             required
+            id="nombre"
           />
           <input
             type="text"
@@ -85,7 +86,7 @@ const Form = () => {
         </div>
         <div className="formBotones">
           <button
-            disabled={!cartContext.cartList.length}
+            disabled={!nombre || !apellido || !telefono || !email}
             onClick={(e) => formSubmit(e)}
           >
             Confirmar compra

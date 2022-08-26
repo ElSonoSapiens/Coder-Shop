@@ -23,6 +23,13 @@ const ItemCount = ({ initial, stock, onAdd }) => {
     }
   };
 
+  const complex = () => {
+    {
+      counter === 0 ? onAdd(counter) : alert("Producto agregado al carrito");
+      onAdd(counter);
+    }
+  };
+
   return (
     <div>
       <div className="itemCount">
@@ -34,12 +41,12 @@ const ItemCount = ({ initial, stock, onAdd }) => {
           +
         </button>
       </div>
-      <button onClick={() => onAdd(counter)} className="btnCarrito">
+      <Link to="/">
+        <button className="btnCarrito">Atrás</button>
+      </Link>
+      <button onClick={complex} className="btnCarrito">
         Agregar al carrito
       </button>
-      <Link to="/">
-        <button className="btnCarrito">Agregar mas productos</button>
-      </Link>
     </div>
   );
 };

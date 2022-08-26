@@ -33,6 +33,14 @@ button {
   border-radius: 1vh;
 }
 
+button:hover {
+  background-color: #ffbd8d;
+}
+
+button:active {
+  background-color: #ae5413;
+}
+
 .itemName {
   font-size: 3vh;
 }
